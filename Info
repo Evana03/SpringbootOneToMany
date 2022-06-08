@@ -1,0 +1,21 @@
+
+
+use mydb;
+CREATE TABLE tbl_employee
+( emp_id INT NOT NULL,
+ name VARCHAR(255),
+ PRIMARY KEY (emp_id)
+ );
+
+ CREATE TABLE tbl_employee_address
+ (
+ addr_id INT NOT NULL,
+ emp_id INT NOT NULL,
+ street VARCHAR(255),
+ city VARCHAR(255),
+ state VARCHAR(255),
+ country VARCHAR(255),
+
+ PRIMARY KEY (addr_id),
+ CONSTRAINT fk_emp FOREIGN KEY (emp_id) REFERENCES tbl_employee (emp_id)
+ );
