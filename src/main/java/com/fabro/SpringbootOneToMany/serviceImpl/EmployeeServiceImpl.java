@@ -33,13 +33,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee saveEmployee(EmployeeDTO employeeDTO) {
         Employee employee=modelMapper.map(employeeDTO,Employee.class);
 
+        Employee savedEmployee=employeeRepositary.save(employee);
 
+       // saveEmployee();
 
-       // Employee savedEmployee=employeeRepositary.save(employee);
-
-        saveEmployee();
-
-        return employee;
+        return savedEmployee;
     }
 
 

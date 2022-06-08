@@ -18,8 +18,6 @@ public class SpringbootOneToManyApplication {
 		ObjectMapper objectMapper = new ObjectMapper();
 		return objectMapper;
 	}
-
-
 	@Bean
 	public ModelMapper getModelMapper() {
 		return new ModelMapper();

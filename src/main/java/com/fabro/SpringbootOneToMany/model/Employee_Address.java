@@ -24,7 +24,7 @@ public class Employee_Address {
     private String country;
 
     @ManyToOne(cascade= CascadeType.ALL)
-    @JoinColumn(name = "emp_id")
+    @JoinColumn(name = "id")
     private Employee employee;
 
 }
