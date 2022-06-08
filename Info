@@ -19,3 +19,33 @@ CREATE TABLE tbl_employee
  PRIMARY KEY (addr_id),
  CONSTRAINT fk_emp FOREIGN KEY (emp_id) REFERENCES tbl_employee (emp_id)
  );
+
+
+
+{
+  "emp_id": 1,
+  "name": "frank",
+  "employee_address": [
+    {
+      "addr_id": 1,
+      "street": "street 1",
+      "city": "city 1",
+      "state": "state 1",
+      "country": "country 1"
+    },
+    {
+      "addr_id": 2,
+      "street": "street 2",
+      "city": "city 2",
+      "state": "state 2",
+      "country": "country 2"
+    },
+    {
+      "addr_id": 3,
+      "street": "street 3",
+      "city": "city 3",
+      "state": "state 3",
+      "country": "country 3"
+    }
+  ]
+}
