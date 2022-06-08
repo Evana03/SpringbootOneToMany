@@ -4,23 +4,24 @@ package com.fabro.SpringbootOneToMany.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 
 @Data
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Entity(name = "tbl_employee")
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int emp_id;
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy="employee",cascade = CascadeType.ALL)
-    private Set<Employee_Address> employeeAddress;
+    @OneToMany(targetEntity =Employee_Address.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id",referencedColumnName = "emp_id")
+    private List<Employee_Address> employeeAddress;
 
 }

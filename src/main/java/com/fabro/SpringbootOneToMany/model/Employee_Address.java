@@ -23,8 +23,8 @@ public class Employee_Address {
     private String state;
     private String country;
 
-    @ManyToOne(cascade= CascadeType.ALL)
-    @JoinColumn(name = "id")
-    private Employee employee;
+//    @ManyToOne(cascade= CascadeType.ALL)
+//    @JoinColumn(name = "id")
+//    private Employee employee;
 
 }

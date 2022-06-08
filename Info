@@ -27,14 +27,12 @@ CREATE TABLE tbl_employee
   "name": "frank",
   "employee_address": [
     {
-      "addr_id": 1,
       "street": "street 1",
       "city": "city 1",
       "state": "state 1",
       "country": "country 1"
     },
     {
-      "addr_id": 2,
       "street": "street 2",
       "city": "city 2",
       "state": "state 2",
